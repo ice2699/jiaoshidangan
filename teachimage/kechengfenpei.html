@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>课表分配</title>
+		<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css"/>
+	</head>
+	<body>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label ">教师姓名</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+					lay-reqtext="姓名不能为空!" placeholder="请输入教师姓名">
+				</div>
+		</div>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label ">授课名称</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+					 lay-reqtext="授课名称不能为空!" placeholder="请输入授课名称">
+				</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label ">课程类型</label>
+			<div class="layui-input-block">
+				<select lay-verify="required">
+					<option value="1">选修</option>
+					<option value="2">必修</option>
+				</select>
+			</div>
+		</div>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label ">学分</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+				lay-reqtext="学分不能为空!" placeholder="请输入学分">
+				</div>
+		</div>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label ">总课时</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+				lay-reqtext="总课时不能为空!" placeholder="请输入总课时">
+				</div>
+		</div>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label ">授课班级</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+				lay-reqtext="授课班级不能为空!" placeholder="请输入授课班级">
+				</div>
+		</div>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label ">班级人数</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+				lay-reqtext="班级人数不能为空!" placeholder="请输入班级人数">
+				</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label ">授课学期</label>
+			<div class="layui-input-block">
+				<select lay-verify="required">
+					<option value="1">2024-2025第一学年</option>
+					<option value="2">2023-2024第二学年</option>
+					<option value="2">2023-2024第一学年</option>
+					<option value="2">2022-2023第二学年</option>
+					<option value="2">2022-2023第一学年</option>
+				</select>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block">
+				<button class="layui-btn layui-btn-success" lay-submit lay-filter="saveBtn">保存</button>
+			</div>
+		</div>
+		<script src="../lib/layui-v2.6.3/layui.js"></script>
+	</body>
+</html>

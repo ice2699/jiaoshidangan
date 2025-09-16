@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>教师月度考勤统计</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+  <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+  <link rel="stylesheet" href="../css/public.css" media="all">
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    body { margin: 0; padding: 20px; }
+    #chart-container { width: 100%; height: 500px; }
+  </style>
+</head>
+<body>
+	<div>
+  <div id="chart-container"></div>
+  <script>
+    const chartDom = document.getElementById('chart-container');
+    const myChart = echarts.init(chartDom);
+    let option;
+
+    option = {
+      title: {
+        text: '教师月度考勤状态统计',
+        left: 'center',
+        textStyle: {
+          fontSize: 18,
+          fontWeight: 'bold'
+        }
+      },
+      tooltip: {
+        trigger: 'axis',
+        formatter: '{b} - {a}：{c}次',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['张明', '李华', '王芳', '赵伟', '刘强','陈静','杨洋','周杰','吴敏','郑亮'],
+        top: 30,
+        left: 'center'
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {
+            title: '保存图表',
+            pixelRatio: 2
+          },
+          dataView: { title: '查看数据' },
+          restore: { title: '重置' }
+        },
+        right: 20
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['出勤', '迟到', '早退', '旷工', '请假'],
+        axisLabel: {
+          fontSize: 12
+        }
+      },
+      yAxis: {
+        type: 'value',
+        name: '次数',
+        min: 0,
+        axisLabel: {
+          formatter: '{value}'
+        }
+      },
+      series: [
+        {
+          name: '张明',
+          type: 'line',
+          data: [22, 3, 2, 0, 1, 2],  // 修正为6个数据点，匹配月份数量
+          smooth: true,
+          lineStyle: { width: 3 },
+          itemStyle: {
+            color: '#52c41a',
+            borderWidth: 2
+          }
+        },
+        {
+          name: '李华',
+          type: 'line',
+          data: [21, 1, 0, 2, 0, 1],  // 修正为6个数据点
+          smooth: true,
+          lineStyle: { width: 3 },
+          itemStyle: {
+            color: '#faad14',
+            borderWidth: 2
+          }
+        },
+        {
+          name: '王芳',
+          type: 'line',
+          data: [27, 1, 0, 0, 0, 0],  // 修正为6个数据点
+          smooth: true,
+          lineStyle: { width: 3 },
+          itemStyle: {
+            color: '#fa8c16',
+            borderWidth: 2
+          }
+        },
+        {
+          name: '赵伟',
+          type: 'line',
+          data: [21, 2, 3, 1, 0, 0],  // 修正为6个数据点
+          smooth: true,
+          lineStyle: { width: 3 },
+          itemStyle: {
+            color: '#f5222d',
+            borderWidth: 2
+          }
+        },
+        {
+          name: '刘强',
+          type: 'line',
+          data: [28, 3, 0, 0, 0, 0],  // 修正为6个数据点
+          smooth: true,
+          lineStyle: { width: 3 },
+          itemStyle: {
+            color: '#1890ff',
+            borderWidth: 2
+          }
+        },
+		{
+		  name: '陈静',
+		  type: 'line',
+		  data: [25, 1, 2, 0, 1, 1],  // 修正为6个数据点，匹配月份数量
+		  smooth: true,
+		  lineStyle: { width: 3 },
+		  itemStyle: {
+		    color: '#52c41a',
+		    borderWidth: 2
+		  }
+		},
+		{
+		  name: '杨洋',
+		  type: 'line',
+		  data: [24, 2, 2, 1, 1, 1],  // 修正为6个数据点，匹配月份数量
+		  smooth: true,
+		  lineStyle: { width: 3 },
+		  itemStyle: {
+		    color: '#666666',
+		    borderWidth: 2
+		  }
+		},
+		{
+		  name: '周杰',
+		  type: 'line',
+		  data: [26, 1, 0, 0, 1, 2],  // 修正为6个数据点，匹配月份数量
+		  smooth: true,
+		  lineStyle: { width: 3 },
+		  itemStyle: {
+		    color: '#c4ebad',
+		    borderWidth: 2
+		  }
+		},
+		{
+		  name: '吴敏',
+		  type: 'line',
+		  data: [23, 1, 2, 2, 0, 2],  // 修正为6个数据点，匹配月份数量
+		  smooth: true,
+		  lineStyle: { width: 3 },
+		  itemStyle: {
+		    color: '#a0a7e6',
+		    borderWidth: 2
+		  }
+		},
+		{
+          name: '郑亮',
+          type: 'line',
+          data: [27, 0, 0, 0, 1, 2],  // 修正为6个数据点，匹配月份数量
+          smooth: true,
+          lineStyle: { width: 3 },
+          itemStyle: {
+            color: '#96dee8 ',
+            borderWidth: 2
+          }
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+    
+    // 响应窗口大小变化
+    window.addEventListener('resize', () => {
+      myChart.resize();
+    });
+  </script>
+  </div>
+  <div class="layuimini-container">
+      <div class="layuimini-main">
+          <div class="layui-row layui-col-space15">
+              <div class="layui-col-md8">
+                  <div class="layui-row layui-col-space15">
+                      <div class="layui-col-md6">
+                          <div class="layui-card">
+                              <div class="layui-card-header"><i class="fa fa-warning icon"></i>数据统计</div>
+                              <div class="layui-card-body">
+                                  <div class="welcome-module">
+                                      <div class="layui-row layui-col-space20">
+                                          <div class="layui-col-xs3">
+                                              <div class="panel layui-bg-number">
+                                                  <div class="panel-body">
+                                                      <div class="panel-title">
+                                                          <span class="label pull-right layui-bg-blue">实时</span>
+                                                          <h5>今日考勤人数</h5>
+                                                      </div>
+                                                      <div class="panel-content">
+                                                          <h1 class="no-margins">9</h1>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="layui-col-xs3">
+                                              <div class="panel layui-bg-number">
+                                                  <div class="panel-body">
+                                                      <div class="panel-title">
+                                                          <span class="label pull-right layui-bg-cyan">实时</span>
+                                                          <h5>本月考勤总次数</h5>
+                                                      </div>
+                                                      <div class="panel-content">
+                                                          <h1 class="no-margins">285</h1>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="layui-col-xs3">
+                                              <div class="panel layui-bg-number">
+                                                  <div class="panel-body">
+                                                      <div class="panel-title">
+                                                          <span class="label pull-right layui-bg-orange">实时</span>
+                                                          <h5>今日缺勤人数</h5>
+                                                      </div>
+                                                      <div class="panel-content">
+                                                          <h1 class="no-margins">1</h1>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="layui-col-xs3">
+                                              <div class="panel layui-bg-number">
+                                                  <div class="panel-body">
+                                                      <div class="panel-title">
+                                                          <span class="label pull-right layui-bg-green">实时</span>
+                                                          <h5>今日请假人数</h5>
+                                                      </div>
+                                                      <div class="panel-content">
+                                                          <h1 class="no-margins">1</h1>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>

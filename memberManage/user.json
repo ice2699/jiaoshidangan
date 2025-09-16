@@ -1,0 +1,97 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+          "id": 20001,
+          "realname": "张明",
+          "title": "教授",
+          "subject": "数据结构",
+          "deptname": "计算机科学与技术学院",
+          "qq": "102345678",
+          "telephone": "13800138001"
+        },
+        {
+          "id": 20002,
+          "realname": "李华",
+          "title": "副教授",
+          "subject": "计算机网络",
+          "deptname": "计算机科学与技术学院",
+          "qq": "103456789",
+          "telephone": "13800138002"
+        },
+        {
+          "id": 20003,
+          "realname": "王芳",
+          "title": "讲师",
+          "subject": "人工智能",
+          "deptname": "计算机科学与技术学院",
+          "qq": "104567890",
+          "telephone": "13800138003"
+        },
+        {
+          "id": 20004,
+          "realname": "赵伟",
+          "title": "教授",
+          "subject": "信号与系统",
+          "deptname": "电子信息工程学院",
+          "qq": "105678901",
+          "telephone": "13800138004"
+        },
+        {
+          "id": 20005,
+          "realname": "刘强",
+          "title": "副教授",
+          "subject": "数字电路",
+          "deptname": "电子信息工程学院",
+          "qq": "106789012",
+          "telephone": "13800138005"
+        },
+        {
+          "id": 20006,
+          "realname": "陈静",
+          "title": "讲师",
+          "subject": "通信原理",
+          "deptname": "通信工程学院",
+          "qq": "107890123",
+          "telephone": "13800138006"
+        },
+        {
+          "id": 20007,
+          "realname": "杨洋",
+          "title": "助教",
+          "subject": "高等数学",
+          "deptname": "理学院",
+          "qq": "108901234",
+          "telephone": "13800138007"
+        },
+        {
+          "id": 20008,
+          "realname": "周杰",
+          "title": "教授",
+          "subject": "理论力学",
+          "deptname": "机械工程学院",
+          "qq": "109012345",
+          "telephone": "13800138008"
+        },
+        {
+          "id": 20009,
+          "realname": "吴敏",
+          "title": "副教授",
+          "subject": "市场营销",
+          "deptname": "商学院",
+          "qq": "100123456",
+          "telephone": "13800138009"
+        },
+        {
+          "id": 20010,
+          "realname": "郑亮",
+          "title": "讲师",
+          "subject": "操作系统",
+          "deptname": "计算机科学与技术学院",
+          "qq": "101234567",
+          "telephone": "13800138010"
+        }
+  ]
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>考勤录入</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="//unpkg.com/layui@2.11.6/dist/css/layui.css" rel="stylesheet">
+		<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css"/>
+		<style>
+			.required::before {
+				/* 星号内容 */
+				content: "*";
+					/* 红色 */
+				color: #ff0000;
+				/* 与文字保持一点距离 */
+				margin-right: 4px;
+			/* 星号加粗 */
+				font-weight: bold;
+		</style>
+	</head>
+	<body>
+	<h2>考勤录入</h2>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label required">教职工号</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+					lay-reqtext="教职工号不能为空!" placeholder="请输入教职工号">
+					<br>
+					<br>
+				</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label required">姓名</label>
+			<div class="layui-input-block">
+			<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+				lay-reqtext="姓名不能为空!" placeholder="请输入姓名">
+			</div>
+			</div>
+			<br>
+			<br>
+		<div class="layui-form-item">
+		  <div class="layui-inline">
+		    <label class="layui-form-label">日期</label>
+		    <div class="layui-input-inline">
+		      <input type="text" class="layui-input" id="birthday" placeholder="yyyy-MM-dd">
+			  <br />
+			  <br />
+		    </div>
+		  </div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">出勤状况</label>
+			<div class="layui-input-block">
+				<input type="checkbox" name="course" lay-skin="tag" title="出勤" checked>
+				<input type="checkbox" name="course" lay-skin="tag" title="迟到">
+				<input type="checkbox" name="course" lay-skin="tag" title="早退">
+				<input type="checkbox" name="course" lay-skin="tag" title="旷工">
+				<input type="checkbox" name="course" lay-skin="tag" title="请假">
+				<br />
+				<br />
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block">
+				<button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">保存</button>
+			</div>
+		</div>
+		<script src="../lib/layui-v2.6.3/layui.js"></script>
+		<script src="//unpkg.com/layui@2.11.6/dist/layui.js"></script>
+		<script>
+		  layui.use(function(){
+			  // 获取laydate
+		    var laydate = layui.laydate;
+		    // 渲染
+		    laydate.render({
+		      elem: '#birthday' // 出生日期文本框的id
+		    });
+		    // 正文显示
+		    laydate.render({
+		      elem: '#createDate', // 创建日期文本框的id
+		      lang: 'cn' // 日历显示语言为中文
+		    });
+			// 年月
+			laydate.render({
+			    elem: '#ID-laydate-type-month',
+			    type: 'month'
+			  });
+			  
+		  });
+		  </script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>学时统计</title>
+		<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css"/>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="//unpkg.com/layui@2.11.6/dist/css/layui.css" rel="stylesheet">
+		<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css"/>
+	</head>
+	<body>
+		<h2>学时统计</h2>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label ">教师姓名</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+					lay-reqtext="姓名不能为空!" placeholder="请输入姓名">
+				</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label required">培训名称</label>
+					<div class="layui-input-block">
+						<select lay-verify="required">
+							<option value="1">新课程改革培训</option>
+							<option value="2">教育技术培训</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">培训主办方</label>
+					<div class="layui-input-block">
+					<input id="userpsw" type="text" name="userpsw" class="layui-input" lay-verify="required"
+					lay-reqtext="主办方不能为空!">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label ">培训时间</label>
+					<div class="layui-input-block">
+					<input id="address" type="text" name="addresss" class="layui-input" lay-verify="required"
+					lay-reqtext="培训时间不能为空!">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label ">培训时长</label>
+					<div class="layui-input-block">
+					<input id="address" type="text" name="addresss" class="layui-input" lay-verify="required"
+					lay-reqtext="培训时长不能为空!">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">培训内容</label>
+					<div class="layui-input-block">
+						<textarea   name="remark" class="layui-textarea" lay-verify="required"
+						lay-reqtext="培训内容不能为空!" placeholder="请输入培训内容"></textarea>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label ">培训证书编号</label>
+					<div class="layui-input-block">
+					<input id="address" type="text" name="addresss" class="layui-input" lay-verify="required"
+					lay-reqtext="证书编号不能为空!">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">保存</button>
+					</div>
+				</div>
+		</div>
+		<script src="../lib/layui-v2.6.3/layui.js"></script>
+	</body>
+</html>

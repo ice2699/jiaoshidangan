@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>修改信息</title>
+		<script>
+			function checkForm(){
+				ups=document.getElementById("userps").value;
+				upsRegExp=/^[0-9a-zA-Z]{6，30}$/
+				if(!upsRegExp.test(ups)){
+					document.getElementById("upstip").innerText="必须是6-30个字符，字母和数字组合";
+					flag=false;
+				}
+				ups2=document.getElementById("userps2").value;
+				ups2RegExp=/^[0-9a-zA-Z]{6，30}$/
+				if(!ups2RegExp.test(ups2)){
+					document.getElementById("upstip2").innerText="必须是6-30个字符，字母和数字组合";
+					flag=false;
+				}
+				ups3=document.getElementById("userps3").value;
+				ups3RegExp=/^[0-9a-zA-Z]{6，30}$/
+				if(!ups3RegExp.test(ups3)){
+					document.getElementById("upstip3").innerText="必须是6-30个字符，字母和数字组合";
+					flag=false;
+				}
+				up=document.getElementById("userps").value;
+				upRegExp=/^[0-9]{12}$/
+				if(!upRegExp.test(up)){
+					document.getElementById("uptip").innerText="必须是12个数字";
+					flag=false;
+				}
+				uname=document.getElementById("username").value;
+				unameRegExp=/^[\u4e00-\u9fa5]{2,6}$/;
+				if(!unameRegExp.test(uname)){
+					document.getElementById("unametip").innerText="必须是2-6个汉字";
+					flag=false;
+				}
+				return flag;
+			}
+		</script>
+		<style>
+			div{
+				text-align: center;
+				
+			}
+		</style>
+	</head>
+	<body bgcolor="azure">
+		<div>
+		<form onsubmit="return checkForm()" action="receive.html">
+			原密码：<input type="password" id="userps"/><span id="upstip" style="color:red"></span>
+			<br /><br><br>
+			新密码：<input type="password2" id="userps2"/><span id="upstip2" style="color:red"></span>
+			<br /><br><br>
+			确认新密码：<input type="password3" id="userps3"/><span id="upstip3" style="color:red"></span>
+			<br /><br><br>
+			联系方式：<input type="text" id="userphone"/><span id="uptip" style="color:red"></span>
+			<br><br><br>
+			用户名：<input type="text" id="username"/><span id="unametip" style="color:red"></span>
+			<br><br><br>
+			<input type="submit" value="登录""/>
+		</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学时管理</title>
+    <!-- 引入ECharts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="//unpkg.com/layui@2.11.6/dist/css/layui.css" rel="stylesheet">
+	<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        #chart-container {
+            width: 100%;
+            height: 600px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="chart-container"></div>
+
+    <script>
+        // 初始化图表实例
+        const chartDom = document.getElementById('chart-container');
+        const myChart = echarts.init(chartDom);
+        let option;
+
+        // 图表配置（保持原始内容不变）
+        option = {
+            legend: {
+                top: 'bottom'
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            series: [
+                {
+                    name: 'Nightingale Chart',
+                    type: 'pie',
+                    radius: [50, 250],
+                    center: ['50%', '50%'],
+                    roseType: 'area',
+                    itemStyle: {
+                        borderRadius: 8
+                    },
+                    data: [
+                        { value: 65, name: '已完成学时' },
+                        { value: 25, name: '未完成学时' }
+                    ]
+                }
+            ]
+        };
+
+        // 设置图表配置并渲染
+        option && myChart.setOption(option);
+
+        // 响应窗口大小变化，调整图表尺寸
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+	<div class="layui-box">
+	    <div class="layui-row layui-col-space10">
+	        <div class="layui-col-md6">
+	            <table class="layui-table">
+	                <colgroup>
+	                    <col width="300">
+	                    <col width="400">
+	                    <col>
+	                </colgroup>
+	                <thead>
+	                <tr>
+	                    <th>昵称</th>
+	                    <th>职位</th>
+	                    <th>所教科目</th>
+	                </tr>
+	                </thead>
+	                <tbody>
+	                <tr>
+	                    <td>张明</td>
+	                    <td>教授</td>
+	                    <td>数据结构</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+	                </tr>
+					<tr>
+					    <td>李华</td>
+					    <td>副教授</td>
+					    <td>计算机网络</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>王芳</td>
+					    <td>讲师</td>
+					    <td>人工智能</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>赵伟</td>
+					    <td>教授</td>
+					    <td>信号与系统</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>刘强</td>
+					    <td>副教授</td>
+					    <td>数字电路</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>陈静</td>
+					    <td>讲师</td>
+					    <td>通信原理</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>杨洋</td>
+					    <td>助教</td>
+					    <td>高等数学</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>周杰</td>
+					    <td>教授</td>
+					    <td>理论力学</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>吴敏</td>
+					    <td>副教授</td>
+					    <td>市场营销</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					    <td>郑亮</td>
+					    <td>讲师</td>
+					    <td>操作系统</td>
+						<td>
+							<div class="layui-input-block">
+								<input type="checkbox" name="course" lay-skin="tag" title="显示">
+							</div>
+						</td>
+					</tr>
+	                </tbody>
+	            </table>
+	        </div>
+</body>
+</html>

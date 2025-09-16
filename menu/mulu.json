@@ -1,0 +1,160 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "yemian.html"
+  },
+  "logoInfo": {
+    "title": "教师档案管理",
+    "image": "images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "首页",
+          "href": "yemian.html",
+          "icon": "fa fa-home",
+          "target": "_self"
+        },
+        {
+          "title": "成员管理",
+          "href": "",
+          "icon": "fa fa-group",
+          "target": "_self",
+          "child": [
+          {
+            "title": "添加成员",
+            "href": "../memberManage/tianjiayonghu.html",
+            "icon": "fa fa-plus-square-o",
+            "target": "_self"
+          }, {
+            "title": "修改删除",
+            "href": "../memberManage/xiugaishanchu.html",
+            "icon": "fa fa-vcard-o",
+            "target": "_self"
+          }, {
+            "title":"查询档案",
+            "href": "../memberManage/chaxundangan.html",
+            "icon": "fa fa-search",
+            "target": "_self"
+          }
+        ]
+        },
+        {
+          "title": "任教信息",
+          "href": "",
+          "icon": "fa fa-user-circle-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "课程分配",
+              "href": "../teachimage/kechengfenpei.html",
+              "icon": "fa fa-spinner",
+              "target": "_self"
+            }, {
+              "title": "课表生成",
+              "href": "../teachimage/kebiaoshengcheng.html",
+              "icon": "fa fa-table",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "考核奖惩",
+          "href": "",
+          "icon": "fa fa-check-square",
+          "target": "_self",
+          "child": [
+            {
+              "title": "考勤记录",
+              "href": "../kaohe/kaoqinluru.html",
+              "icon": "fa fa-list-alt",
+              "target": "_self"
+            }, {
+              "title": "考勤统计",
+              "href": "../kaohe/kaoqintongji.html",
+              "icon": "fa fa-area-chart",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "教学管理",
+          "href": "",
+          "icon": "fa fa-send-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "教学质量评估",
+              "href": "../teachmanage/zhiliangpinggu.html",
+              "icon": "fa fa-line-chart",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "专业发展",
+          "href": "",
+          "icon": "fa fa-paw",
+          "target": "_self",
+          "child": [
+            {
+              "title": "学时统计",
+              "href": "../develop/xueshitongji.html",
+              "icon": "fa fa-trello",
+              "target": "_self"
+            }, {
+              "title": "学时管理",
+              "href": "../develop/xueshiguanli.html",
+              "icon": "fa fa-toggle-on",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "科研管理",
+          "href": "",
+          "icon": "fa fa-flag",
+          "target": "_self",
+          "child": [
+            {
+              "title": "成果录入",
+              "href": "../access/chengguoluru.html",
+              "icon": "fa fa-plus-square-o",
+              "target": "_self"
+            }, {
+              "title": "成果展示",
+              "href": "../access/chengguozhanshi.html",
+              "icon": "fa fa-search",
+              "target": "_self"
+            }
+          ]
+        },
+		{
+		  "title": "系统管理",
+		  "href": "",
+		  "icon": "fa fa-cogs",
+		  "target": "_self",
+		  "child": [
+		    {
+		      "title": "修改信息",
+		      "href": "../system/xiugaixinxi.html",
+		      "icon": "fa fa-wrench",
+		      "target": "_self"
+		    }, {
+		      "title": "系统更新",
+		      "href": "../system/xitonggengxin.html",
+		      "icon": "fa fa-info-circle",
+		      "target": "_self"
+		    }
+		  ]
+		}
+      ]
+    }
+  ]
+}

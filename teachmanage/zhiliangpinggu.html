@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>教学质量评估</title>
+		<script src="https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js"></script>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+		<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+		<link rel="stylesheet" href="../css/public.css" media="all">
+	</head>
+	<body>
+		<div>
+			<div>
+				<!-- 查询条件开始 -->
+				<fieldset class="table-search-fieldset">
+					<legend>搜索信息</legend>
+					<div style="margin: 10px 10px 10px 10px">
+						<form class="layui-form layui-form-pane" action="">
+							<div class="layui-form-item">
+								<div class="layui-inline">
+									<label class="layui-form-label">姓名</label>
+									<div class="layui-input-inline">
+										<input type="text" name="realName" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-inline">
+									<button type="submit" class="layui-btn layui-btn-primary"  lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</fieldset> 	<!-- 查询条件结束 -->
+		<div id="mydiv" style="width: 600px; height: 400px;"></div>
+		<script>
+			mycharts=echarts.init(document.getElementById("mydiv"));
+			option={
+				title:{
+					text:'个人得分明细',
+					subtext:'2024-2025学年第二学期',
+					left:'center'
+				},
+				tooltip:{
+					trigger:"axits",
+					axisPointer:{
+						type:'shadow'
+					}
+				},
+				xAxis:{
+					data:['教学工作','专业能力','育人职责','职业规范与师德']
+				},
+				yAxis:{},
+				series:[{
+					name:'指标得分',
+					type:'bar',
+					data:[100,80,90,100]
+				}]
+			};
+			mycharts.setOption(option);
+		</script>
+		<div class="layui-card">
+		    <div class="layui-card-header"><i class="fa fa-fire icon"></i>教师信息</div>
+		    <div class="layui-card-body layui-text">
+		        <table class="layui-table">
+		            <colgroup>
+		                <col width="100">
+		                <col>
+		            </colgroup>
+		            <tbody>
+		            <tr>
+		                <td>教师名称</td>
+		                <td>
+		                    张明
+		                </td>
+		            </tr>
+		            <tr>
+		                <td>当前职位</td>
+		                <td>教授</td>
+		            </tr>
+		            <tr>
+		                <td>教职工号</td>
+		                <td>20001</td>
+		            </tr>
+		            <tr>
+		                <td>教授课程</td>
+		                <td>
+		                   数据结构
+		                </td>
+		            </tr>
+		            <tr>
+		                <td>加权总分</td>
+		                <td>
+		                    90
+		                </td>
+		            </tr>
+		            <tr>
+		                <td>全校排名</td>
+		                <td style="padding-bottom: 0;">
+		                    2
+		                </td>
+		            </tr>
+		            </tbody>
+		        </table>
+		    </div>
+		</div>
+	</body>
+</html>
